@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --yellow: #eea35d;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .25s linear;
+}
+*::selection{
+    background: var(--yellow);
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(var(--yellow));
+}
+
+body{
+    background-color: #222;
+    overflow-x: hidden;
+}
+
+
+/* Header Starts */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    height: 100%;
+    width: 35rem;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--yellow);
+}
+header .user img:hover{
+    border-color: rgb(19, 174, 235);
+    transform: scale(1.1);
+}
+
+
+header .user .name{
+    font-size: 3.5rem;
+    color:#fff;
+}
+header .user .post{
+    font-size: 2rem;
+    color:#eee;
+}
+
+header .navbar{
+    width: 100%;
+}
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background: rgb(238,163,93);
+    background: radial-gradient(circle, rgba(238,163,93,1) 59%, rgba(232,216,142,1) 100%);}
+
+/* Header Ends Here */
+#menu{
+    position: fixed;
+    top:2rem;
+    right:2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index:500;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width:1200px){
+    html{
+        font-size: 45%;
+    }
+}
+@media (max-width:991px){
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+}

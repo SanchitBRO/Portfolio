@@ -22,6 +22,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 html::-webkit-scrollbar{
     width: 1.4rem;
@@ -296,14 +297,15 @@ header .navbar ul li a:hover{
     padding: 2rem 0;
 }
 .portfolio .box-container .box{
+    background: #333;
+    border-radius: 1rem;
+    margin: 2rem;
     height: 20rem;
     width: 20rem;
     border-radius: 1rem;
-    margin: 2rem;
     overflow: hidden;
     cursor: pointer;
-    background: var(--yellow);
-    color: #fff;
+    color: var(--yellow);
     font-size: 3.5rem;
     position: relative;
 }
@@ -317,11 +319,82 @@ header .navbar ul li a:hover{
 }
 .portfolio .box-container .box:hover{
     transform: scale(1.1);    ;
-    background-color: rgb(19, 174, 235)
+    background-color:rgba(19, 174, 235, 0.7);
 }
 
+/* Contact me */
 
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.contact .row form .box{
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-overflow: none;
+    font-size: 1.7rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+.contact .row form .box::placeholder{
+    text-transform: none;
+}
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .info a{
+    color:var(--yellow);
+}
+.contact .row .content .info a:hover{
+    color: rgb(19, 174, 235);
+    transform: scale(1.1);
+}
+.contact .row .content .info h3 i{
+    margin-right: 1rem;
+    color: #eee;
+    text-transform: none ;
+    font-size: 2rem;
+}
 
+/* Scroll To Top */
+.top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    color: #eee;
+    font-size: 4rem;
+}
 
 
 
@@ -343,7 +416,12 @@ header .navbar ul li a:hover{
         padding: 1rem 4rem;
     }
 }
-@media (max-width:991px){
+
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
     header{
         left:-220%;
     }
@@ -355,12 +433,6 @@ header .navbar ul li a:hover{
     }
     body{
         padding: 0;
-    }
-}
-
-@media (max-width:768px){
-    html{
-        font-size: 50%;
     }
 }
 @media (max-width:400px){

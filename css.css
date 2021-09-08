@@ -16,8 +16,8 @@
 }
 *::selection{
     background: var(--yellow);
+    
 }
-
 
 html{
     font-size: 62.5%;
@@ -43,6 +43,7 @@ section{
     min-height: 100vh;
     padding: 1rem;
 }
+
 .btn{
     padding: 0.7rem 3rem;
     background: #333;
@@ -137,8 +138,7 @@ header .navbar ul li a{
 }
 header .navbar ul li a:hover{
     background: rgb(238,163,93);
-    background: radial-gradient(circle, rgba(238,163,93,1) 59%, rgba(232,216,142,1) 100%);}
-
+}
 /* Header Ends Here */
 #menu{
     position: fixed;
@@ -217,6 +217,7 @@ header .navbar ul li a:hover{
      width: 20rem;
      background: #333;
      text-align: center;
+     border-radius: 1rem;
      padding: 2rem;
      margin: 2rem;
  }
@@ -234,6 +235,7 @@ header .navbar ul li a:hover{
 
 
 /* Education Section */
+
 .education .box-container{
     display: flex;
     align-items: center;
@@ -244,7 +246,7 @@ header .navbar ul li a:hover{
 }
 
 .education .box-container .box{
-    width: 27rem;
+    width: 30rem;
     margin:4rem 1rem;
     padding-left: 4rem;
     border-left: 0.2rem solid #fff;
@@ -282,6 +284,39 @@ header .navbar ul li a:hover{
     background:var(--yellow);
 }
 .education .box-container .box i:hover{
+    background-color: rgb(19, 174, 235)
+}
+
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.portfolio .box-container .box{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--yellow);
+    color: #fff;
+    font-size: 3.5rem;
+    position: relative;
+}
+.portfolio .box-container .box p{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.portfolio .box-container .box:hover{
+    transform: scale(1.1);    ;
     background-color: rgb(19, 174, 235)
 }
 
